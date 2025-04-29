@@ -150,10 +150,11 @@ export function EventBookingForm() {
         />
       </div>
       <div className="w-full flex flex-col items-start gap-6 md:flex-row md:justify-between md:place-items-center">
-        <div className="w-full flex flex-col md:flex-row gap-4 md:h-[76px]">
+        <div className="w-full flex flex-col md:flex-row md:items-start gap-4 md:h-[76px] max-w-[425px]">
           <Checkbox
-            className="w-[500px]"
+            className="w-[500px] text-xs"
             isSelected={formData.includeTime}
+            classNames={{wrapper: "bg-white", label: "text-sm"}}
             onValueChange={(selected) => setFormData({...formData, includeTime: selected})}
           >
             Specify Time
@@ -173,7 +174,7 @@ export function EventBookingForm() {
                     <div className="flex items-center text-xs text-default-500 gap-1 cursor-help">
                       <Icon icon="lucide:arrow-up-down" className="hidden md:block w-3.5 h-3.5" />
                       <span className="md:hidden">Tap on to adjust</span>
-                      <span className="hidden md:block">Click or use arrow keys</span>
+                      <span className="hidden md:block">Use arrows / Click</span>
                     </div>
                   </Tooltip>
                 </div>
@@ -190,7 +191,7 @@ export function EventBookingForm() {
                     <div className="flex items-center text-xs text-default-500 gap-1 cursor-help">
                       <Icon icon="lucide:arrow-up-down" className="hidden md:block w-3.5 h-3.5" />
                       <span className="md:hidden">Tap on to adjust</span>
-                      <span className="hidden md:block">Click or use arrow keys</span>
+                      <span className="hidden md:block">Use arrows / Click</span>
                     </div>
                   </Tooltip>
                 </div>
@@ -202,15 +203,18 @@ export function EventBookingForm() {
           <Button
               className="border-white text-gray-700"
               variant="bordered"
+              size="lg"
               startContent={<Icon icon="lucide:refresh-ccw" />}
               onPress={handleReset}
             >
               Reset
             </Button>
             
-            <Button
+          <Button
+              className="font-bold"
               color="primary"
               type="submit"
+              size="lg"
               startContent={<Icon icon="lucide:calendar-check" />}
             >
               Book Event
