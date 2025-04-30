@@ -9,6 +9,7 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
+  safelist: ['animate-blur'],
   theme: {
    extend: {
       screens: {
