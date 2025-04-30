@@ -28,9 +28,25 @@ module.exports = {
           "0%": { transform: "scale(1)" },
           "100%": { transform: "scale(1.1)" },
         },
+        'blur-animation': {
+        '0%': {
+          backdropFilter: 'blur(0px)',
+          WebkitBackdropFilter: 'blur(0px)',
+        },
+        '50%': {
+          backdropFilter: 'blur(5px)',
+          WebkitBackdropFilter: 'blur(5px)',
+        },
+        '100%': {
+          backdropFilter: 'blur(3px)',
+          WebkitBackdropFilter: 'blur(3px)',
+        },
+      },
+        
       },
       animation: {
         sizeUp: "sizeUp 0.8s ease-out",
+        blur: 'blur-animation 3s ease-in-out forwards',
       },
       spacing: {
         pxClamp: "clamp(16px, 5vw, 68px)",
