@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Providers } from "@/Components/Providers";
 import "./globals.css";
+import { Providers } from "@/сomponents/Providers";
 
 export const metadata: Metadata = {
   title: "SportyLabs App",
