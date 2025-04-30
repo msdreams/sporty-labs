@@ -51,9 +51,8 @@ export function EventBookingForm() {
     if (!formData.eventName) {
       setEmailError(true);
       return
-    } else {
-      setEmailError(false);
-    }
+    } 
+    setEmailError(false);
     setSubmitted({ ...formData });
     onOpen();
   };
@@ -136,7 +135,10 @@ export function EventBookingForm() {
           name="eventName"
           placeholder="Enter event name"
           value={formData.eventName}
-          onValueChange={(value) => setFormData({ ...formData, eventName: value })}
+          onValueChange={(value) => {
+            setFormData({ ...formData, eventName: value })
+            setEmailError(false)
+          }}
           isInvalid={emailError}
         />
         
