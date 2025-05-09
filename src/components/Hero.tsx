@@ -1,6 +1,6 @@
-"use client"
 import React from "react";
 import { EventBookingForm } from "./event-boooking-form"
+import { AnimatedActiveButton } from "./AnimatedActiveButton";
 
 export default function Hero() {
   return (
@@ -8,9 +8,12 @@ export default function Hero() {
       <div className="flex flex-col justify-center items-center">
       <div className="text-4xl md:text-5xl animate-fade-in-down">
         Make your life{" "}
-          <span className=" text-white font-medium bg-primary px-4 pb-1 rounded-3xl ">
+          {/* <span className="text-white font-medium bg-primary px-4 pb-1 rounded-3xl ">
             active
-          </span>, book your next activity!
+          </span> */}
+          <AnimatedActiveButton />
+
+          , book your next activity!
       </div>
       </div>
       <div
