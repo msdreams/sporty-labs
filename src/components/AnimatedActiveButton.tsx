@@ -46,11 +46,11 @@ export const AnimatedActiveButton = () => {
     particleLayerRef.current.appendChild(particle);
 
     gsap.to(particle, {
-      x: gsap.utils.random(-600, 600),
-      y: gsap.utils.random(-600, 600),
+      x: gsap.utils.random(-800, 800),
+      y: gsap.utils.random(-800, 800),
       opacity: 0,
       scale: gsap.utils.random(1.5, 3.5),
-      duration: gsap.utils.random(1.5, 3),
+      duration: gsap.utils.random(1.5, 2.5),
       ease: 'power2.out',
       onComplete: () => {
         particle.remove();

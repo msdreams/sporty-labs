@@ -17,7 +17,7 @@ export default function Hero() {
       </div>
       </div>
       <div
-        className="w-full flex flex-row px-4 py-6 md:pt-12 md:px-8 lg:px-10 rounded-3xl bg-[#25DB49CC] animate-fade-in-up ">
+        className=" w-full flex flex-row px-4 py-6 md:pt-12 md:px-8 lg:px-10 rounded-3xl bg-[#25DB49DD] animate-fade-in-up ">
         <EventBookingForm />
       </div>
     </div>
